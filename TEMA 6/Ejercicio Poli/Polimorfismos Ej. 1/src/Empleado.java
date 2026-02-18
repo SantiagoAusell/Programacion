@@ -14,4 +14,12 @@ public class Empleado {
     public double calcularSalario() {
         return salarioBase;
     }
+
+    /*
+     * En caso de hacer esta clase abstracta lo que ocurriria es que no podriamos
+     * crear un objeto
+     * que llame a esta clase directamente, tambien obligamos a las clases hijas a
+     * cumplir el metodo
+     * y organizamos todo de mejor manera
+     */
 }
