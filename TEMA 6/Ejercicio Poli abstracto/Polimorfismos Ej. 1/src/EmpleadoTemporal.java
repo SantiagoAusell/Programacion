@@ -18,4 +18,16 @@ public class EmpleadoTemporal extends Empleado {
     public void aumentarSalario(double porcentaje) {
         pagoPorHora = pagoPorHora + (pagoPorHora * porcentaje / 100);
     }
+
+    @Override
+    public String getTipoEmpleado() {
+        return super.getTipoEmpleado() + "Fijo";
+    }
+
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + nombre
+                + " | Tipo: Empleado Temporal"
+                + " | Salario: " + calcularSalario());
+    }
 }

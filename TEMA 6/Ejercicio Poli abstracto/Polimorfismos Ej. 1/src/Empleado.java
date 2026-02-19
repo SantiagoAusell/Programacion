@@ -19,6 +19,16 @@ public abstract class Empleado {
 
     public abstract void aumentarSalario(double porcentaje);
 
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + nombre
+                + " | Tipo: Empleado"
+                + " | Salario: " + calcularSalario());
+    }
+
+    public String getTipoEmpleado() {
+        return nombre;
+    }
+
     /*
      * En caso de hacer esta clase abstracta lo que ocurriria es que no podriamos
      * crear un objeto
