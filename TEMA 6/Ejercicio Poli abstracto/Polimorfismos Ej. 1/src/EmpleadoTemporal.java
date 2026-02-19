@@ -2,8 +2,9 @@ public class EmpleadoTemporal extends Empleado {
     double horasTrabajadas;
     double pagoPorHora;
 
-    public EmpleadoTemporal(String nombre, double horasTrabajadas, double pagoPorHora) {
-        super(nombre);
+    public EmpleadoTemporal(String nombre, double porcentaje, double horasTrabajadas,
+            double pagoPorHora) {
+        super(nombre, 0, porcentaje);
         this.horasTrabajadas = horasTrabajadas;
         this.pagoPorHora = pagoPorHora;
     }
@@ -11,5 +12,10 @@ public class EmpleadoTemporal extends Empleado {
     @Override
     public double calcularSalario() {
         return horasTrabajadas * pagoPorHora;
+    }
+
+    @Override
+    public void aumentarSalario(double porcentaje) {
+        pagoPorHora = pagoPorHora + (pagoPorHora * porcentaje / 100);
     }
 }
