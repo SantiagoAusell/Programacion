@@ -12,5 +12,12 @@ public class App {
 
         lista.add(p1);
         lista.add(p2);
+
+        int total = 0;
+        for (Person i : lista) {
+            total += total + i.toRun();
+        }
+
+        System.out.println("La velocidad media es: " + total / lista.size());
     }
 }
